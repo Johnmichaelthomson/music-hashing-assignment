@@ -1,0 +1,57 @@
+HASH TABLE INSERTION
+
+Insertion order:
+105, 210, 315, 420, 525, 630, 735, 840
+
+Hash function:
+h(k) = k % 10
+
+Hash indices:
+105 -> 5
+210 -> 0
+315 -> 5 (collision)
+420 -> 0 (collision)
+525 -> 5 (collision)
+630 -> 0 (collision)
+735 -> 5 (collision)
+840 -> 0 (collision)
+
+Linear probing placements:
+105 -> index 5
+210 -> index 0
+315 -> index 6
+420 -> index 1
+525 -> index 7
+630 -> index 2
+735 -> index 8
+840 -> index 3
+
+Final Hash Table:
+[0] : 210
+[1] : 420
+[2] : 630
+[3] : 840
+[4] : EMPTY
+[5] : 105
+[6] : 315
+[7] : 525
+[8] : 735
+[9] : EMPTY
+
+SEARCH RESULTS
+
+Searching for 105
+Hashing: Found at index 5, Comparisons = 1
+Linear Search: Found at position 0, Comparisons = 1
+
+Searching for 420
+Hashing: Found at index 1, Comparisons = 2
+Linear Search: Found at position 3, Comparisons = 4
+
+Searching for 840
+Hashing: Found at index 3, Comparisons = 4
+Linear Search: Found at position 7, Comparisons = 8
+
+Searching for 999
+Hashing: Not found, Comparisons = 4
+Linear Search: Not found, Comparisons = 8
